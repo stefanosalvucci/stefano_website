@@ -17,12 +17,11 @@
       <div class="row">
         <div class="col-xs-12">
           <div id="photo-header" class="text-center">
-            <!-- PHOTO (AVATAR) -->
             <div id="photo">
               <img src="assets/profile.png" alt="avatar">
             </div>
             <div id="text-header">
-              <h1>Hello,<br> my name is <span>Stefano</span><sup>24yo</sup> and this is my resume</h1>
+              <h1>Hello,<br> my name is <span>Stefano</span><sup><%= Time.now.year - 1991 %>yo</sup> and this is my resume</h1>
             </div>
           </div>
         </div>
@@ -32,38 +31,39 @@
           <!-- ABOUT ME -->
           <div class="box">
             <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, non, dolorem, cumque distinctio magni quam expedita velit laborum sunt amet facere tempora ut fuga aliquam ad asperiores voluptatem dolorum! Quasi.</p>
+            <p>Engineer to all intents and purposes: good problem solving skills and a fast adaptation to any situation make me very ductile.
+            I have excellent communication skills, in my life I've had many occasions where good communication was the foundation for the success of my work.</p>
           </div>
           <!-- EDUCATION -->
           <div class="box">
             <h2>Education</h2>
             <ul id="education" class="clearfix">
               <li>
-                <div class="year pull-left">1990</div>
+                <div class="year pull-left">1991</div>
                 <div class="description pull-right">
-                  <h3>I was born in Katowice</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, exercitationem, totam, dolores iste dolore est aut modi.</p>
+                  <h3>I was born in Rome</h3>
+                  <p>The beginning of the story...</p>
                 </div>
               </li>
               <li>
-                <div class="year pull-left">2005</div>
+                <div class="year pull-left">2010</div>
                 <div class="description pull-right">
-                  <h3>Secondary school specializing in artistic</h3>
-                  <p>Eos, explicabo, nam, tenetur et ab eius deserunt aspernatur ipsum ducimus quibusdam quis voluptatibus.</p>
+                  <h3>IT high school - "ITIS ARMELLINI"</h3>
+                  <p>grade: 96/100</p>
                 </div>
               </li>
               <li>
-                <div class="year pull-left">2009</div>
+                <div class="year pull-left">2013</div>
                 <div class="description pull-right">
-                  <h3>First level graduation in Graphic Design</h3>
-                  <p>Aspernatur, mollitia, quos maxime eius suscipit sed beatae ducimus quaerat quibusdam perferendis? Iusto, quibusdam asperiores unde repellat.</p>
+                  <h3>Bachelor degree in CS - "Università di Roma 3"</h3>
+                  <p>grade 100/110</p>
                 </div>
               </li>
               <li>
-                <div class="year pull-left">2012</div>
+                <div class="year pull-left">2016</div>
                 <div class="description pull-right">
-                  <h3>Second level graduation in Graphic Design</h3>
-                  <p>Ducimus, aliquam tempore autem itaque et accusantium!</p>
+                  <h3>Master degree in CS - "Università di Roma 3"</h3>
+                  <p>grade ?</p>
                 </div>
               </li>
             </ul>
@@ -73,22 +73,33 @@
             <h2>Experiences</h2>
             <div class="job clearfix">
               <div class="col-xs-3">
-                <div class="where">Google</div>
-                <div class="year">2013 - 2014</div>
+                <div class="where"><a href="http://www.tascout.com" target="_blank">Tascout</a></div>
+                <div class="year">2015 - Ongoing</div>
               </div>
               <div class="col-xs-9">
-                <div class="profession">Front-end developer / php programmer</div>
-                <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, et, illum perferendis veritatis velit sunt similique qui magni totam harum tempore eius laboriosam accusantium necessitatibus voluptatum? Enim, itaque dignissimos quia.</div>
+                <div class="profession">RoR backend developer</div>
+                <div class="description">Like every startup you've different responsibilities: from testing your codebase, to ensure that deployment process works fine. Most of the time I develop new features, do tests and think about how I can improve the platform. I take slightly more time before starting writing code than before.</div>
               </div>
             </div>
             <div class="job clearfix">
               <div class="col-xs-3">
-                <div class="where">Twitter</div>
-                <div class="year">2012</div>
+                <div class="where">CircleMe</div>
+                <div class="year">2013 - 2015</div>
               </div>
               <div class="col-xs-9">
-                <div class="profession">Web Developer</div>
-                <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, nihil sit nemo voluptatem praesentium. Quia, qui facere consectetur libero asperiores fugiat consequuntur deserunt culpa repudiandae sed quidem voluptas explicabo soluta.</div>
+                <div class="profession">RoR junior backend developer</div>
+                <div class="description">My first real job. I start building my skills here. RoR, SQL, AWS, JS, and a lot more acronyms. When you take your own responsibilities, you become a better person.
+                Working in a startup means that you’ve to face a lot of different problems, and you’ve to find a solution to them, better if quickly. The most important thing I’ve learned is the way to approach and solve a problem.</div>
+              </div>
+            </div>
+            <div class="job clearfix">
+              <div class="col-xs-3">
+                <div class="where">Vodafone Italy</div>
+                <div class="year">2012 - 2014</div>
+              </div>
+              <div class="col-xs-9">
+                <div class="profession">Play the future project</div>
+                <div class="description">A fantastic opportunity to stay in close contact with the reality of the workplace, collaborating with the youth marketing team is dynamic and fun. </div>
               </div>
             </div>
           </div>
@@ -98,38 +109,41 @@
           <div class="box clearfix">
             <h2>Contact</h2>
             <div class="contact-item">
-              <div class="icon pull-left text-center"><span class="fa fa-phone fa-fw"></span></div>
-              <div class="title only pull-right">500 345 242</div>
+              <div class="icon pull-left text-center"><span class="fa fa-linkedin fa-fw"></span></div>
+              <div class="title pull-right">LinkedIn</div>
+              <div class="description pull-right"><a href="https://it.linkedin.com/pub/stefano-salvucci/41/872/b4a" target="_blank">Stefano's profile</a></div>
             </div>
             <div class="contact-item">
               <div class="icon pull-left text-center"><span class="fa fa-envelope fa-fw"></span></div>
-              <div class="title only pull-right">office@kamsolutions.pl</div>
+              <div class="title pull-right">Email</div>
+              <div class="description pull-right">stefanosalvucci+ws@gmail.com</div>
             </div>
             <div class="contact-item">
               <div class="icon pull-left text-center"><span class="fa fa-twitter fa-fw"></span></div>
               <div class="title pull-right">Twitter</div>
-              <div class="description pull-right">https://twitter.com/WordPress</div>
+              <div class="description pull-right"><a href="https://twitter.com/essex91" target="_blank"> https://twitter.com/essex91</a></div>
             </div>
             <div class="contact-item">
               <div class="icon pull-left text-center"><span class="fa fa-facebook fa-fw"></span></div>
               <div class="title pull-right">Facebook</div>
-              <div class="description pull-right">https://www.facebook.com/facebook</div>
+              <div class="description pull-right"><a href="https://www.facebook.com/stefano.salvucci" target="_blank">https://www.facebook.com/stefano.salvucci</a></div>
             </div>
             <div class="contact-item">
               <div class="icon pull-left text-center"><span class="fa fa-skype fa-fw"></span></div>
               <div class="title pull-right">Skype</div>
-              <div class="description pull-right">kamsolutions.pl</div>
+              <div class="description pull-right">stefano.salvucci</div>
             </div>
           </div>
           <!-- SKILLS -->
           <div class="box">
             <h2>Skills</h2>
             <div class="skills">
-              <div class="item-skills" data-percent="1.00">HTML</div>
-              <div class="item-skills" data-percent="0.90">CSS</div>
-              <div class="item-skills" data-percent="0.80">jQuery</div>
-              <div class="item-skills" data-percent="0.75">PHP</div>
-              <div class="item-skills" data-percent="0.25">Laravel 2 (framework)</div>
+              <div class="item-skills" data-percent="0.85">Rails</div>
+              <div class="item-skills" data-percent="0.75">Ruby</div>
+              <div class="item-skills" data-percent="0.75">SQL</div>
+              <div class="item-skills" data-percent="0.70">Linux shell</div>
+              <div class="item-skills" data-percent="0.6">jQuery</div>
+              <div class="item-skills" data-percent="0.6">Java</div>
               <div class="skills-legend clearfix">
                 <div class="legend-left legend">Beginner</div>
                 <div class="legend-left legend"><span>Proficient</span></div>
@@ -142,16 +156,18 @@
           <div class="box">
             <h2>Languages</h2>
             <div id="language-skills">
-              <div class="skill">Polish <div class="icons pull-right"><div style="width: 80%;" class="icons-red"></div></div></div>
-              <div class="skill">English <div class="icons pull-right"><div style="width: 60%;" class="icons-red"></div></div></div>
+              <div class="skill">English <div class="icons pull-right"><div style="width: 80%;" class="icons-red"></div></div></div>
+              <div class="skill">Italian <div class="icons pull-right"><div style="width: 100%;" class="icons-red"></div></div></div>
+              <div class="skill">Spanish <div class="icons pull-right"><div style="width: 30%;" class="icons-red"></div></div></div>
             </div>
           </div>
           <!-- HOBBIES -->
           <div class="box">
             <h2>Hobbies</h2>
-            <div class="hobby">Photography</div>
+            <div class="hobby">Singing</div>
             <div class="hobby">Fitness</div>
-            <div class="hobby">Programming</div>
+            <div class="hobby">Reading</div>
+            <div class="hobby">Cooking</div>
           </div>
         </div>
       </div>
