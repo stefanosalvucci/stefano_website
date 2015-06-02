@@ -2,6 +2,12 @@
 <html>
 <head>
   <title>Stefano</title>
+  <meta property="og:title" content="Stefano Salvucci website" />
+  <meta property="og:site_name" content="stefanosalvucci"/>
+  <meta property="og:url" content="http://www.stefanosalvucci.com" />
+  <meta property="og:image" content="<%= asset_url('assets/moi.jpg')%>" />
+  <meta property="og:description" content="A simple overview of my technical skills and my previous experiences, hope you like it :)" />
+  <%= favicon_link_tag %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
