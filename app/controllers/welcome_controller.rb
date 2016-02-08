@@ -84,7 +84,7 @@ Disaster recovery e business continuity.
 Confronto tra DPS e piano di sicurezza
 QUESTIONS
 
-    @q =  questions.lines.sample.strip
+    @q =  questions.lines.to_a.sample.strip
   end
 
   def hi
