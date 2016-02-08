@@ -12,7 +12,6 @@ Fai un esempio di sql injection e spiegalo.
 Fai un esempio di XSS e spiegalo
 Fai un esempio di XSS persistente e spiegalo.
 Fai un esempio di CSRF e spiegalo.
-Sicurezza delle reti.
 Vulnerabilità degli switch.
 Descrivi l’attacco noto come ARP poisoning.
 Descrivi l’attacco noto come TCP hijecking.
@@ -27,7 +26,6 @@ Dai una configurazione di un firewall con la sintassi di iptables che sia equiva
 Descrivi le problematiche di scalabilità dei firewall e le soluzioni possibili.
 Descrivi le componenti principali di un IDS.
 Descrivi le problematiche di scalabilità dei firewall è una soluzione possibile.
-Principi di progettazione
 Descrivi il principio noto come “minimalità dei diritti” e rapportalo al comportamento tipico di un utente che si vede assegnati diritti maggiori del necessario.
 Descrivi il principio noto come “Default sicuri”, fai un esempio
 Descrivi il principio noto come “Semplicità” e perché è importante per la sicurezza informatica.
@@ -37,11 +35,9 @@ Descrivi il principio noto come “mediazione completa” e spiega come si reali
 Descrivi il principio noto come “defence in depth” e il suo impatto sulla gestione del budget.
 Descrivi il principio noto come “usabilità” e fai due esempi in cui la scarsa usabilità di una contromisura rende un sistema insicuro.
 Descrivi il principio noto come “eterogeneità” e spiega perché è difficilmente applicabile.
-Modelli
 Descrivi il modello noto come AAA e mostra un esempio concreto.
 Descrivi il modello noto come Access Matrix e modella con esso un caso relativo ad un filesystem
 DAC e MAC, definizioni, differenze, e ambiti applicativi.
-Sicurezza dei sistemi
 Quali sono le quattro tipologie di informazioni che possono essere potenzialmente usate per l’autenticazione?
 Hardening: punti di forza, applicabilità, difficoltà, strumenti.
 Che cosa è un wrapper? quando si usa? cosa fa?
@@ -50,7 +46,6 @@ IDS: falsi positivi e falsi negativi, cosa sono? che problemi danno? quanto sono
 Syslog. Casi d’uso. Punti di forza e debolezze.
 Sudo. Casi d’uso. Punti di forza e debolezze.
 PAM. Casi d’uso. Punti di forza e debolezze.
-Tecniche crittografiche
 Definizione e proprietà di una funzione di hash crittografica.
 Definizione e proprietà di un metodo di crifratura simmetrico.
 Definizione e proprietà di un metodo di crifratura asimmetrico.
@@ -68,7 +63,6 @@ Segreti a lungo termine vs. segreti a breve termine, cosa sono? perché sono nec
 Scambio di chiave di sessione e tcp session hijack: che tipo di impatto hanno questi due aspetti sul progetto di protocolli di trasporto crittografici (tipo ssl).
 Perfect forward secrecy: che garanzie dà? dai un esempio di protocollo dotato di PFS basato su un protocollo a chiave asimmetrica tipo RSA.
 Diffie Hellman. A che serve? Come funziona? Che garanzie dà?
-Applicazioni delle tecniche crittografiche
 Public Key Infrastructures: descrivi il concetto di certificato, di certification authority e di catena di certificati.
 Quali sono i punti critici di una PKI?
 Descrivi SSL e il concetto di cipher suite.
@@ -76,7 +70,6 @@ Descrivi SSL e l’handshake con autenticazione RSA.
 IP-Sec: descrivi la struttura del pacchetto per il servizio Encapsulated Security Payload nelle due varianti tunnel mode e transport mode.
 Autenticazione di livello 2: EAP, RADIUS e loro utilizzo per l’auteticazione di un hot spot wifi.
 Descrivi il concetto di one time password e dai un esempio di tecnica realizzativa
-Pianificazione
 Contenuto di un piano di sicurezza
 Contenuto di un DPS per conformità alla 192/2003
 Analisi del rischio: principi, metodi di valutazione e metodi di mitigazione
