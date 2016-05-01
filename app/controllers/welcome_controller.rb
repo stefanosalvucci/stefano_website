@@ -81,6 +81,9 @@ QUESTIONS
   end
 
   def hi
-
   end
+
+  def infovis_pacman
+  end
+
 end

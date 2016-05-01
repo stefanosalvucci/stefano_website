@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<!-- <meta http-equiv="refresh" content="1" > -->
+<style>
+  body {
+    background-image: url(<%= image_url("background-body.jpg")%>);
+    background-size:cover;
+  }
+
+  svg {
+    background-image: url(<%= image_url("background.jpg")%>);
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+  }
+
+</style>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+<body>
+  <script>
+    var width = 800
+    var height = 600
+    var vis = d3.select("body").append("svg");
+    var pi = Math.PI;
+    var pacman_w = 50
+    var pacman_h = 50
+    var x = (width/2) - pacman_w;
+    var y = (height/2) - pacman_h;
+    var dir = "up";
+    var rot = "";
+    var audio = new Audio('pacman_chomp.wav');
+
+    var pacman = d3.svg.arc()
+        .innerRadius(0)
+        .outerRadius(20)
+        .startAngle(pi/6)
+        .endAngle((11*pi)/6)
+
+    var bitingPacman = d3.svg.arc()
+        .innerRadius(0)
+        .outerRadius(20)
+        .startAngle((0.1*pi)/6)
+        .endAngle(2*pi)
+
+    vis.attr("width", width).attr("height", height)
+        .append("path")
+        .attr("d", pacman)
+        .attr("fill", "yellow")
+        .attr("id", "pacman")
+
+    turn('right');
+
+
+  function turn(direction){
+    var transformAction, duration
+    [transformAction, duration] = window[direction]();
+
+    d3.select("#pacman").
+      transition().
+      duration(duration).
+      attr("transform", transformAction);
+  }
+
+
+  function up() {
+    turnDuration = 150
+    if(y >= 60 ){
+      y = y - 30;
+    } else if (x > width / 2 - 30 && x < width / 2 + 30){
+      y = height
+      turnDuration = 0
+    }
+    if(dir != "up")
+      rot="rotate(0)";
+    dir="up";
+    return ["translate("+x+","+y+")"+rot, turnDuration];
+  }
+
+  function down() {
+    turnDuration = 150
+    if (y <= height - pacman_h){
+      y = y + 30;
+    } else if (x > width / 2 - 30 && x < width / 2 + 30){
+      y = 0
+      turnDuration = 0
+    }
+    if(dir != "down")
+      rot="rotate(180)";
+    dir="down";
+    return ["translate("+x+","+y+")"+rot, turnDuration];
+  }
+
+  function right() {
+    turnDuration = 150
+    if (x <= width - pacman_w){
+      x = x + 30;
+    } else if (y > height / 2 - 40 && y < height / 2 + 30){
+      x = 0
+      turnDuration = 0
+    }
+    if(dir != "right")
+      rot="rotate(90)";
+    dir="right";
+    return ["translate("+x+","+y+")"+rot, turnDuration];
+  }
+
+  function left() {
+    turnDuration = 150
+    if (x >= 50 ){
+      x = x - 30;
+    } else if (y > height / 2 - 40 && y < height / 2 + 30){
+      x = width
+      turnDuration = 0
+    }
+    if(dir != "left")
+      rot="rotate(270)";
+    dir="left";
+    return ["translate("+x+","+y+")"+rot, turnDuration];
+  }
+
+
+  function direction(e) {
+    var key = parseInt(e.keyCode);
+    if (key==38) {
+      turn('up');
+      audio.play();
+    }
+    if (key==40) {
+      turn('down');
+      audio.play();
+    }
+    if (key==39) {
+      turn('right');
+      audio.play();
+    }
+    if (key==37) {
+      turn('left');
+      audio.play();
+    }
+  }
+
+
+  function animatePacman() {
+    d3.select("#pacman")
+        .transition()
+        .duration(200)
+        .attr("d", bitingPacman)
+        .transition()
+        .delay(500)
+        .attr("d", pacman)
+  }
+
+  setInterval(animatePacman, 1000);
+  document.body.addEventListener("keyup", direction, false);
+  </script>
+
+  <a href=""></a>
+
+</body>
+</html>
