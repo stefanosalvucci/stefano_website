@@ -57,7 +57,7 @@ var brush = d3.svg.brush()
                   .on("brush", brushed);
 
 // setup complete, let's get some data!
-d3.json("source/rfc.json", function(error, data) {
+d3.json("http://stefanosalvucci.com/info_vis/source/rfc.json", function(error, data) {
 
     maxRfcReleaseDate = maxDate(data);
 
